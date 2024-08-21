@@ -1,0 +1,83 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #949494;
+  perspective: 600px;
+}
+
+.wrapper {
+  width: 350px;
+  height: 300px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: aliceblue;
+  overflow: hidden;
+  position: relative;
+  border-radius: 8px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  transform-origin: center;
+  transition: 0.2s all;
+}
+.wrapper .bullets {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+}
+.wrapper .bullets button {
+  font-size: 10vw;
+  color: #8d8d8d;
+  cursor: pointer;
+  transition: 0.2s;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  border: none;
+  background-color: transparent;
+}
+.wrapper .bullets button:hover {
+  color: rgb(13, 0, 127);
+  scale: 1.1;
+}
+.wrapper .card {
+  width: 350px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  transition: 0.3s ease-out;
+}
+.wrapper .card h2 {
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    width: 300px;
+  }
+  .wrapper .card {
+    width: inherit;
+  }
+}
+@keyframes flip-card {
+  from {
+    transform: rotateY(0);
+  }
+  to {
+    transform: rotateY(-180deg);
+  }
+}/*# sourceMappingURL=style.css.map */
